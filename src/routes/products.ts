@@ -14,3 +14,11 @@ ProductsRouter.get("/", (req: Request, res: Response) => {
     ],
   });
 });
+
+ProductsRouter.post("/", (req: Request, res: Response) => {
+  res.status(200).json({
+    success: true,
+    message: "Product created successfully",
+    data: req.body,
+  });
+});
